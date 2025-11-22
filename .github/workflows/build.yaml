@@ -11,6 +11,8 @@ jobs:
         distribution: 'graalvm-community'
         java-version: '25'
         components: 'native-image'
+    - name: run without native-image
+      run: mvn spring-boot:run
     - name: build
       run: mvn -Pnative native:compile
     - name: run app
